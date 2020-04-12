@@ -5,7 +5,10 @@ jobs:
     name: Action Bonjour Monde
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
       - uses: actions/checkout@v2
+
+      - name: Execute script
       - uses: ./action-a/.scripts
         with:
           MON_NOM: "Mona"
